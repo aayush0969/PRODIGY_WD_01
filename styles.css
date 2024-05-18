@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #9EB8D9;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.brand {
+    color: crimson;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.5s ease;
+}
+
+.nav-link:hover {
+    background-color: cyan;
+    color: #fff;
+}
+
+.content {
+    padding-top: 60px; 
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.home {
+    background: url('https://smallbizclub.com/wp-content/uploads/2020/06/bigstock-Group-Of-Professional-Business-349068817.jpg') no-repeat center center/cover;
+    color: brown;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about, .contact {
+    background-color: #f4f4f4;
+}
+
+.services {
+    background-color: #e2e2e2;
+}
+
+.service-item {
+    margin: 20px 0;
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+
+/* Responsive Styles */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
